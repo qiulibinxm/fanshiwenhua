@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凡石文化管理后台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'scholar-blue': '#1E3A8A',
+                        'scholar-gold': '#D4AF37',
+                        'scholar-dark': '#1F2937',
+                        'scholar-light': '#F8FAFC',
+                        'scholar-accent': '#DC2626'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-scholar-light to-white min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4">
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-scholar-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-2xl font-bold">管</span>
+            </div>
+            <h1 class="text-2xl font-bold text-scholar-dark">凡石文化管理后台</h1>
+            <p class="text-gray-500 mt-2">请登录管理系统</p>
+        </div>
+        
+        <form id="admin-login-form" class="space-y-6">
+            <div>
+                <label class="block text-scholar-dark font-medium mb-2">用户名</label>
+                <input type="text" id="admin-username" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" placeholder="请输入用户名" value="admin">
+            </div>
+            <div>
+                <label class="block text-scholar-dark font-medium mb-2">密码</label>
+                <input type="password" id="admin-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" placeholder="请输入密码" value="admin123">
+            </div>
+            <div class="text-red-500 text-sm hidden" id="login-error"></div>
+            <button type="submit" class="w-full bg-scholar-accent hover:bg-scholar-accent/90 text-white py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                登录管理系统
+            </button>
+        </form>
+        
+        <div class="text-center mt-6 text-gray-500 text-sm">
+            <p>© 2024 凡石文化. 保留所有权利.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('admin-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            const errorElement = document.getElementById('login-error');
+            
+            // 管理员验证
+            if (username === 'admin' && password === 'admin123') {
+                // 设置登录状态
+                localStorage.setItem('adminLoggedIn', 'true');
+                
+                // 跳转到主网站
+                window.location.href = 'fanshi_culture_final.html';
+            } else {
+                errorElement.textContent = '用户名或密码错误';
+                errorElement.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

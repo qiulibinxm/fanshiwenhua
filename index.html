@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凡石文化 - 传承经典 文化育人</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'scholar-blue': '#1E3A8A',
+                        'scholar-gold': '#D4AF37',
+                        'scholar-dark': '#1F2937',
+                        'scholar-light': '#F8FAFC',
+                        'scholar-accent': '#DC2626'
+                    },
+                    fontFamily: {
+                        'chinese': ['KaiTi', 'STKaiti', 'serif'],
+                        'modern': ['Inter', 'Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+            .back-to-top-btn {
+                background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+                box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .back-to-top-btn:hover {
+                background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+                box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+                transform: translateY(-2px) scale(1.05);
+            }
+            .back-to-top-btn:active {
+                transform: translateY(0) scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body class="bg-scholar-light font-modern text-scholar-dark scroll-smooth">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-chinese font-bold text-scholar-dark">凡石文化</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">首页</a>
+                    <a href="#naming" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">命名服务</a>
+                    <a href="#ip-character" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">IP形象</a>
+                    <a href="#cases" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">案例展示</a>
+                    <a href="#about" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">关于我们</a>
+                    <a href="#contact" class="nav-link text-scholar-dark hover:text-scholar-accent transition-colors duration-300 font-medium">联系我们</a>
+                </div>
+                
+                <button class="md:hidden text-scholar-dark hover:text-scholar-accent" id="mobile-menu-btn">
+                    菜单
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="md:hidden bg-white border-t hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">首页</a>
+                <a href="#naming" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">命名服务</a>
+                <a href="#ip-character" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">IP形象</a>
+                <a href="#cases" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">案例展示</a>
+                <a href="#about" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">关于我们</a>
+                <a href="#contact" class="block py-2 text-scholar-dark hover:text-scholar-accent transition-colors duration-300">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-scholar-light via-white to-scholar-light/80">
+        <div class="absolute inset-0 opacity-5">
+            <div class="w-full h-full bg-[url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path d=\"M10,20 Q30,10 50,20 Q70,30 90,20 M10,40 Q30,30 50,40 Q70,50 90,40 M10,60 Q30,50 50,60 Q70,70 90,60 M10,80 Q30,70 50,80 Q70,90 90,80\" stroke=\"%231E3A8A\" stroke-width=\"1\"/></svg>')]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h1 class="text-5xl md:text-7xl font-chinese font-bold text-scholar-dark mb-6 leading-tight" id="home-title">
+                        凡石文化
+                    </h1>
+                    <p class="text-xl md:text-2xl text-scholar-dark/80 mb-8 font-chinese leading-relaxed" id="home-slogan">
+                        传承经典文化，弘扬中华精神
+                    </p>
+                    <p class="text-lg text-scholar-dark/70 mb-12 leading-relaxed" id="home-description">
+                        专业提供命名服务、文化教育、活动策划、文创开发等全方位传统文化服务，
+                        让千年文化在现代生活中焕发新的光彩。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="scrollToSection('naming')" class="bg-scholar-accent hover:bg-scholar-accent/90 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            立即咨询
+                        </button>
+                        <button onclick="scrollToSection('ip-character')" class="border-2 border-scholar-blue text-scholar-blue hover:bg-scholar-blue hover:text-white px-8 py-4 rounded-lg font-medium transition-all duration-300">
+                            了解IP形象
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://doc.doubao.com/s/aZJPl4JlQTY/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%281%29+%E6%8B%B7%E8%B4%9D.jpg" alt="凡石文化IP形象" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl" id="home-image">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-scholar-gold rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            传承
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 滚动提示 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <span class="text-scholar-dark/60 font-medium">向下滚动</span>
+        </div>
+    </section>
+
+    <!-- 命名服务 -->
+    <section id="naming" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-chinese font-bold text-scholar-dark mb-4" id="naming-title">命名服务</h2>
+                <p class="text-xl text-scholar-dark/70 max-w-3xl mx-auto" id="naming-subtitle">
+                    结合传统易学与现代美学，为您量身定制寓意深远的佳名
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="order-2 lg:order-1">
+                    <img src="https://doc.doubao.com/s/dNaWpTIlmUU/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%288%29.png" alt="命名服务" class="w-full rounded-2xl shadow-2xl" id="naming-image">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-6" id="naming-heading">专业命名 传承文化</h3>
+                    <p class="text-lg text-scholar-dark/70 mb-8 leading-relaxed" id="naming-description">
+                        我们的命名服务融合了《易经》、《诗经》等经典文化精髓，结合生辰八字、五行平衡等传统命理，
+                        为个人和企业提供富有文化内涵和吉祥寓意的名称。
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-scholar-dark mb-2" id="service1-title">宝宝起名</h4>
+                            <p class="text-scholar-dark/70" id="service1-description">结合生辰八字，融合诗词典故，为宝宝取一个吉祥如意、寓意深远的好名字。</p>
+                        </div>
+                        
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-scholar-dark mb-2" id="service2-title">公司命名</h4>
+                            <p class="text-scholar-dark/70" id="service2-description">根据行业特点和发展愿景，打造独特易记、富有文化底蕴的企业名称。</p>
+                        </div>
+                        
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-scholar-dark mb-2" id="service3-title">成人改名</h4>
+                            <p class="text-scholar-dark/70" id="service3-description">针对个人发展需求，结合命理分析，提供更适合的名字选择。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 命名流程 -->
+            <div class="bg-scholar-light rounded-2xl p-8 md:p-12">
+                <h3 class="text-3xl font-chinese font-bold text-scholar-dark text-center mb-12" id="process-title">命名流程</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-scholar-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="step1-title">需求沟通</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="step1-description">了解客户需求和期望</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-scholar-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="step2-title">命理分析</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="step2-description">结合生辰八字进行分析</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-scholar-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="step3-title">创意构思</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="step3-description">精心构思多个备选方案</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-scholar-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white font-bold text-xl">4</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="step4-title">最终确定</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="step4-description">与客户沟通确定最终方案</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IP形象介绍 -->
+    <section id="ip-character" class="py-20 bg-gradient-to-br from-scholar-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-chinese font-bold text-scholar-dark mb-4" id="ip-title">IP形象</h2>
+                <p class="text-xl text-scholar-dark/70 max-w-3xl mx-auto" id="ip-subtitle">
+                    凡石先生 - 传统文化的传承者与传播者
+                </p>
+            </div>
+            
+            <!-- 主IP形象展示 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://doc.doubao.com/s/aZJPl4JlQTY/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%281%29+%E6%8B%B7%E8%B4%9D.jpg" alt="凡石先生主形象" class="w-full max-w-lg mx-auto rounded-2xl shadow-2xl" id="ip-main-image">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-6" id="ip-name">凡石先生</h3>
+                    <p class="text-lg text-scholar-dark/70 mb-6 leading-relaxed" id="ip-description1">
+                        凡石先生是我们精心打造的文化IP形象，身着传统汉服，头戴儒巾，手持毛笔和书卷，
+                        体现了中国传统文化学者的儒雅风范。他不仅是知识的传播者，更是文化的传承者。
+                    </p>
+                    <p class="text-lg text-scholar-dark/70 mb-8 leading-relaxed" id="ip-description2">
+                        凡石先生将陪伴大家走进传统文化的世界，感受千年智慧的魅力，
+                        让传统文化在现代生活中焕发新的生机与活力。
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="feature1-title">文化传承</h4>
+                            <p class="text-scholar-dark/70 text-sm" id="feature1-description">传承中华优秀传统文化</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="feature2-title">智慧传播</h4>
+                            <p class="text-scholar-dark/70 text-sm" id="feature2-description">传播经典文化智慧</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IP形象应用场景 -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-chinese font-bold text-scholar-dark text-center mb-12" id="application-title">应用场景</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <img src="https://doc.doubao.com/s/vhYAp_WTs7c/?alice_filename=12121.png" alt="IP形象头像" class="w-32 h-32 mx-auto mb-4 rounded-full shadow-lg" id="scene1-image">
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="scene1-title">品牌标识</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="scene1-description">作为公司品牌形象代表</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://doc.doubao.com/s/CJdshVfEKck/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%289%29.png" alt="IP形象在数字设备中" class="w-32 h-32 mx-auto mb-4 rounded-lg shadow-lg" id="scene2-image">
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="scene2-title">数字产品</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="scene2-description">应用于APP、网站等数字平台</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://doc.doubao.com/s/dNaWpTIlmUU/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%288%29.png" alt="IP形象在学习场景" class="w-32 h-32 mx-auto mb-4 rounded-lg shadow-lg" id="scene3-image">
+                        <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="scene3-title">教育场景</h4>
+                        <p class="text-scholar-dark/70 text-sm" id="scene3-description">文化教育和培训活动</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IP形象故事 -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+                <h3 class="text-3xl font-chinese font-bold text-scholar-dark text-center mb-8" id="story-title">凡石先生的故事</h3>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg text-scholar-dark/70 leading-relaxed mb-6" id="story-paragraph1">
+                        凡石先生自幼酷爱读书，对中华传统文化有着深厚的感情。他遍读四书五经，精研诗词歌赋，
+                        深悟其中的人生智慧和处世之道。
+                    </p>
+                    <p class="text-lg text-scholar-dark/70 leading-relaxed mb-6" id="story-paragraph2">
+                        成年后，凡石先生游历四方，寻访名师，切磋学问。他深感传统文化的博大精深，
+                        也意识到传承和弘扬传统文化的重要性。
+                    </p>
+                    <p class="text-lg text-scholar-dark/70 leading-relaxed" id="story-paragraph3">
+                        如今，凡石先生致力于传统文化的传播与教育，希望通过自己的努力，
+                        让更多的人了解和喜爱中华传统文化，让千年智慧在现代社会中绽放新的光彩。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section id="cases" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-chinese font-bold text-scholar-dark mb-4" id="cases-title">案例展示</h2>
+                <p class="text-xl text-scholar-dark/70 max-w-3xl mx-auto" id="cases-subtitle">
+                    精选我们的成功案例，见证文化传承的力量
+                </p>
+            </div>
+            
+            <!-- 活动策划案例 -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-chinese font-bold text-scholar-dark text-center mb-12" id="activity-title">文化活动策划</h3>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://doc.doubao.com/s/vccBaIXHC60/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%287%29.png" alt="文化活动" class="w-full rounded-2xl shadow-2xl" id="activity-image">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-semibold text-scholar-dark mb-4" id="activity-name">传统节日庆典</h4>
+                        <p class="text-lg text-scholar-dark/70 mb-6 leading-relaxed" id="activity-description">
+                            我们策划并执行了多场大型传统文化活动，包括春节庙会、端午龙舟赛、中秋赏月会等，
+                            让市民在参与中感受传统文化的魅力，增强文化认同感。
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-scholar-accent mr-3">•</span>
+                                <span class="text-scholar-dark/70" id="case1">春节庙会 - 参与人数超过10万人次</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-scholar-accent mr-3">•</span>
+                                <span class="text-scholar-dark/70" id="case2">端午文化节 - 弘扬龙舟精神</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-scholar-accent mr-3">•</span>
+                                <span class="text-scholar-dark/70" id="case3">中秋诗会 - 传承诗词文化</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 客户反馈 -->
+            <div class="bg-scholar-light rounded-2xl p-8 md:p-12">
+                <h3 class="text-3xl font-chinese font-bold text-scholar-dark text-center mb-12" id="feedback-title">客户反馈</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="mb-4">
+                            <span class="text-scholar-gold text-xl" id="client1-name">张女士</span>
+                            <p class="text-scholar-dark/60 text-sm" id="client1-type">宝宝起名客户</p>
+                        </div>
+                        <p class="text-scholar-dark/70 italic" id="client1-feedback">"为宝宝起的名字既有文化内涵，又符合命理，全家人都很满意。老师的专业水平很高，服务态度也很好。"</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="mb-4">
+                            <span class="text-scholar-gold text-xl" id="client2-name">李总</span>
+                            <p class="text-scholar-dark/60 text-sm" id="client2-type">企业命名客户</p>
+                        </div>
+                        <p class="text-scholar-dark/70 italic" id="client2-feedback">"公司名字起得很好，既体现了我们的行业特色，又有很好的寓意。现在客户都夸我们的名字有文化底蕴。"</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="mb-4">
+                            <span class="text-scholar-gold text-xl" id="client3-name">王经理</span>
+                            <p class="text-scholar-dark/60 text-sm" id="client3-type">活动策划客户</p>
+                        </div>
+                        <p class="text-scholar-dark/70 italic" id="client3-feedback">"凡石文化策划的文化活动非常成功，现场氛围很好，参与者反响热烈。专业的团队和贴心的服务让我们很放心。"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-gradient-to-br from-scholar-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-chinese font-bold text-scholar-dark mb-4" id="about-title">关于我们</h2>
+                <p class="text-xl text-scholar-dark/70 max-w-3xl mx-auto" id="about-subtitle">
+                    传承文化薪火，弘扬中华精神
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://doc.doubao.com/s/vccBaIXHC60/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%287%29.png" alt="关于我们" class="w-full rounded-2xl shadow-2xl" id="about-image">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-6" id="company-title">公司简介</h3>
+                    <p class="text-lg text-scholar-dark/70 mb-6 leading-relaxed" id="company-description1">
+                        凡石文化成立于2024年，是一家专注于传统文化传承与发展的综合性文化公司。
+                        我们致力于通过专业的命名服务、文化教育、活动策划和文创开发，让传统文化在现代社会中焕发新的生机。
+                    </p>
+                    <p class="text-lg text-scholar-dark/70 mb-8 leading-relaxed" id="company-description2">
+                        虽然成立时间不长，但我们拥有专业的团队和丰富的经验，在业内树立了良好的口碑，
+                        成为传统文化传承与发展的重要力量。
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-scholar-accent mb-2" id="stat1">1000+</div>
+                            <p class="text-scholar-dark/70 text-sm" id="stat1-label">服务客户</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-scholar-blue mb-2" id="stat2">50+</div>
+                            <p class="text-scholar-dark/70 text-sm" id="stat2-label">文化活动</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-scholar-gold mb-2" id="stat3">1+</div>
+                            <p class="text-scholar-dark/70 text-sm" id="stat3-label">服务年限</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 我们的使命 -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+                <div class="text-center">
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-8" id="mission-title">我们的使命</h3>
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-xl text-scholar-dark/70 leading-relaxed mb-8" id="mission-statement">
+                            "传承中华优秀传统文化，弘扬民族精神，让经典智慧在现代生活中焕发新的光彩，
+                            为构建中华民族共有精神家园贡献力量。"
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-scholar-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-scholar-accent text-xl font-bold">愿景</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="vision-title">成为引领者</h4>
+                                <p class="text-scholar-dark/70 text-sm" id="vision-description">传统文化传承与发展的引领者</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-scholar-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-scholar-blue text-xl font-bold">使命</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="mission-title2">传承弘扬</h4>
+                                <p class="text-scholar-dark/70 text-sm" id="mission-description2">传承文化薪火，弘扬中华精神</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-scholar-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-scholar-gold text-xl font-bold">价值</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-scholar-dark mb-2" id="value-title">专业诚信</h4>
+                                <p class="text-scholar-dark/70 text-sm" id="value-description">专业、诚信、创新、传承</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-chinese font-bold text-scholar-dark mb-4" id="contact-title">联系我们</h2>
+                <p class="text-xl text-scholar-dark/70 max-w-3xl mx-auto" id="contact-subtitle">
+                    期待与您携手传承传统文化，共创美好未来
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 联系信息 -->
+                <div>
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-8" id="contact-info-title">联系方式</h3>
+                    <div class="space-y-6">
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-1" id="address-title">公司地址</h4>
+                            <p class="text-scholar-dark/70" id="address">北京市通州区北苑155号417</p>
+                        </div>
+                        
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-1" id="phone-title">联系电话</h4>
+                            <p class="text-scholar-dark/70" id="phone">16754983474</p>
+                        </div>
+                        
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-1" id="email-title">邮箱地址</h4>
+                            <p class="text-scholar-dark/70" id="email">qiulibinxm@163.com</p>
+                        </div>
+                        
+                        <div class="bg-scholar-light p-6 rounded-xl">
+                            <h4 class="text-lg font-semibold text-scholar-dark mb-1" id="hours-title">服务时间</h4>
+                            <p class="text-scholar-dark/70" id="hours">周一至周日 9:00-18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 咨询表单 -->
+                <div class="bg-scholar-light rounded-2xl p-8 md:p-12">
+                    <h3 class="text-3xl font-chinese font-bold text-scholar-dark mb-8" id="form-title">在线咨询</h3>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-scholar-dark font-medium mb-2" id="name-label">姓名</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" placeholder="请输入您的姓名" id="customer-name">
+                            </div>
+                            <div>
+                                <label class="block text-scholar-dark font-medium mb-2" id="phone-label">电话</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" placeholder="请输入联系电话" id="customer-phone">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2" id="service-label">服务类型</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" id="service-type">
+                                <option value="">请选择服务类型</option>
+                                <option value="baby-name">宝宝起名</option>
+                                <option value="company-name">公司命名</option>
+                                <option value="adult-name">成人改名</option>
+                                <option value="event-planning">活动策划</option>
+                                <option value="cultural-products">文创开发</option>
+                                <option value="other">其他咨询</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2" id="requirement-label">详细需求</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent focus:border-transparent transition-colors duration-300" placeholder="请详细描述您的需求" id="customer-requirement"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-scholar-accent hover:bg-scholar-accent/90 text-white py-4 rounded-lg font-medium transition-colors duration-300 transform hover:scale-105" id="submit-btn">
+                            提交咨询
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-scholar-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <span class="text-2xl font-chinese font-bold" id="footer-title">凡石文化</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed" id="footer-description">
+                        传承经典文化，弘扬中华精神，让千年文化在现代生活中焕发新的光彩。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6" id="footer-services">服务项目</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#naming" class="hover:text-scholar-accent transition-colors duration-300" id="footer-service1">命名服务</a></li>
+                        <li><a href="#ip-character" class="hover:text-scholar-accent transition-colors duration-300" id="footer-service2">IP形象</a></li>
+                        <li><a href="#cases" class="hover:text-scholar-accent transition-colors duration-300" id="footer-service3">活动策划</a></li>
+                        <li><a href="#cases" class="hover:text-scholar-accent transition-colors duration-300" id="footer-service4">文创开发</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6" id="footer-links">快速链接</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#home" class="hover:text-scholar-accent transition-colors duration-300" id="footer-link1">首页</a></li>
+                        <li><a href="#about" class="hover:text-scholar-accent transition-colors duration-300" id="footer-link2">关于我们</a></li>
+                        <li><a href="#contact" class="hover:text-scholar-accent transition-colors duration-300" id="footer-link3">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6" id="footer-contact">联系信息</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li id="footer-address">北京市通州区北苑155号417</li>
+                        <li id="footer-phone">16754983474</li>
+                        <li id="footer-email">qiulibinxm@163.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+                <p id="copyright">&copy; 2024 凡石文化. 保留所有权利. | 京ICP备xxxxxxxx号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 - 重新设计 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 back-to-top-btn text-white rounded-full flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 z-40">
+        <span class="transform rotate-0 transition-transform duration-300">↑</span>
+    </button>
+
+    <!-- 后台管理面板 -->
+    <div id="admin-panel" class="fixed inset-0 bg-white z-50 hidden">
+        <!-- 管理页面导航 -->
+        <nav class="bg-scholar-dark text-white p-4">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <h1 class="text-xl font-bold">凡石文化管理后台</h1>
+                <div class="flex space-x-4">
+                    <button onclick="switchAdminTab('content')" class="admin-tab-btn px-4 py-2 rounded bg-scholar-accent">内容管理</button>
+                    <button onclick="switchAdminTab('messages')" class="admin-tab-btn px-4 py-2 rounded hover:bg-scholar-dark/80">客户留言</button>
+                    <button onclick="switchAdminTab('seo')" class="admin-tab-btn px-4 py-2 rounded hover:bg-scholar-dark/80">SEO设置</button>
+                    <button onclick="logoutAdmin()" class="px-4 py-2 bg-red-600 rounded hover:bg-red-700">退出登录</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 内容管理标签页 -->
+        <div id="content-tab" class="admin-tab-content p-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl font-bold text-scholar-dark mb-6">内容管理</h2>
+                
+                <!-- 文字内容管理 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                    <h3 class="text-xl font-semibold text-scholar-dark mb-4">文字内容管理</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">选择要编辑的内容</label>
+                            <select id="content-selector" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" onchange="loadContentForEditing()">
+                                <option value="">请选择...</option>
+                                <!-- 动态生成内容选择器选项 -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">当前内容</label>
+                            <div id="current-content" class="border border-gray-300 rounded-lg p-4 h-20 overflow-auto bg-gray-50">
+                                选择内容后显示...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-scholar-dark font-medium mb-2">新内容</label>
+                        <textarea id="new-content" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" rows="4" placeholder="请输入新内容"></textarea>
+                    </div>
+                    <button onclick="saveContent()" class="mt-4 bg-scholar-accent text-white px-6 py-3 rounded-lg hover:bg-scholar-accent/90 transition-colors duration-300">
+                        保存修改
+                    </button>
+                </div>
+
+                <!-- 图片管理 -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-scholar-dark mb-4">图片管理</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">选择要更换的图片</label>
+                            <select id="image-selector" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" onchange="loadImageForEditing()">
+                                <option value="">请选择...</option>
+                                <!-- 动态生成图片选择器选项 -->
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">当前图片</label>
+                            <div id="current-image" class="border border-gray-300 rounded-lg p-4 h-32 flex items-center justify-center bg-gray-50">
+                                <span class="text-gray-500">选择图片后显示...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-scholar-dark font-medium mb-2">上传新图片</label>
+                        <input type="file" id="new-image" accept="image/*" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent">
+                        <p class="text-sm text-gray-500 mt-2">支持JPG、PNG格式，建议尺寸不超过2MB</p>
+                    </div>
+                    <button onclick="saveImage()" class="mt-4 bg-scholar-accent text-white px-6 py-3 rounded-lg hover:bg-scholar-accent/90 transition-colors duration-300">
+                        上传图片
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 客户留言标签页 -->
+        <div id="messages-tab" class="admin-tab-content p-6 hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl font-bold text-scholar-dark mb-6">客户留言管理</h2>
+                
+                <!-- 筛选和搜索 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">服务类型筛选</label>
+                            <select id="service-filter" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" onchange="filterMessages()">
+                                <option value="">全部类型</option>
+                                <option value="baby-name">宝宝起名</option>
+                                <option value="company-name">公司命名</option>
+                                <option value="adult-name">成人改名</option>
+                                <option value="event-planning">活动策划</option>
+                                <option value="cultural-products">文创开发</option>
+                                <option value="other">其他咨询</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">搜索</label>
+                            <input type="text" id="message-search" placeholder="搜索姓名、电话..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" onkeyup="filterMessages()">
+                        </div>
+                        <div class="flex items-end">
+                            <button onclick="deleteAllMessages()" class="w-full bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300">
+                                清空所有留言
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 留言列表 -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="text-left py-3 px-4 font-semibold text-scholar-dark">姓名</th>
+                                    <th class="text-left py-3 px-4 font-semibold text-scholar-dark">电话</th>
+                                    <th class="text-left py-3 px-4 font-semibold text-scholar-dark">服务类型</th>
+                                    <th class="text-left py-3 px-4 font-semibold text-scholar-dark">提交时间</th>
+                                    <th class="text-left py-3 px-4 font-semibold text-scholar-dark">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messages-list">
+                                <!-- 动态生成留言列表 -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="no-messages" class="text-center py-8 text-gray-500 hidden">
+                        暂无客户留言
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO设置标签页 -->
+        <div id="seo-tab" class="admin-tab-content p-6 hidden">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-scholar-dark mb-6">SEO优化设置</h2>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <form id="seo-form" class="space-y-6">
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">网站标题 (Title)</label>
+                            <input type="text" id="seo-title" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" placeholder="请输入网站标题">
+                            <p class="text-sm text-gray-500 mt-1">建议长度：50-60字符</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">网站描述 (Description)</label>
+                            <textarea id="seo-description" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" rows="3" placeholder="请输入网站描述"></textarea>
+                            <p class="text-sm text-gray-500 mt-1">建议长度：120-160字符</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">关键词 (Keywords)</label>
+                            <input type="text" id="seo-keywords" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" placeholder="请输入关键词，用逗号分隔">
+                            <p class="text-sm text-gray-500 mt-1">建议5-8个关键词</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">页面标题格式</label>
+                            <input type="text" id="page-title-format" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent" placeholder="例如：%page% - 凡石文化">
+                            <p class="text-sm text-gray-500 mt-1">%page% 会被替换为具体页面名称</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-scholar-dark font-medium mb-2">网站图标 (Favicon)</label>
+                            <input type="file" id="seo-favicon" accept="image/*" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scholar-accent">
+                            <p class="text-sm text-gray-500 mt-1">建议尺寸：16x16或32x32像素</p>
+                        </div>
+                        
+                        <button type="submit" class="bg-scholar-accent text-white px-6 py-3 rounded-lg hover:bg-scholar-accent/90 transition-colors duration-300">
+                            保存SEO设置
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- SEO建议 -->
+                <div class="bg-blue-50 rounded-xl p-6 mt-6">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-4">SEO优化建议</h3>
+                    <ul class="text-blue-700 space-y-2 text-sm">
+                        <li>• 标题应包含主要关键词，保持简洁明了</li>
+                        <li>• 描述应准确概括网站内容，包含关键词</li>
+                        <li>• 关键词应与网站内容相关，避免堆砌</li>
+                        <li>• 定期更新网站内容，保持网站活跃度</li>
+                        <li>• 确保网站加载速度快，用户体验良好</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let currentAdminTab = 'content';
+        let isAdminLoggedIn = false;
+        
+        // 初始化数据结构
+        const websiteData = {
+            content: {
+                // 首页内容
+                'home-title': '凡石文化',
+                'home-slogan': '传承经典文化，弘扬中华精神',
+                'home-description': '专业提供命名服务、文化教育、活动策划、文创开发等全方位传统文化服务，让千年文化在现代生活中焕发新的光彩。',
+                
+                // 命名服务内容
+                'naming-title': '命名服务',
+                'naming-subtitle': '结合传统易学与现代美学，为您量身定制寓意深远的佳名',
+                'naming-heading': '专业命名 传承文化',
+                'naming-description': '我们的命名服务融合了《易经》、《诗经》等经典文化精髓，结合生辰八字、五行平衡等传统命理，为个人和企业提供富有文化内涵和吉祥寓意的名称。',
+                
+                // 服务项目
+                'service1-title': '宝宝起名',
+                'service1-description': '结合生辰八字，融合诗词典故，为宝宝取一个吉祥如意、寓意深远的好名字。',
+                'service2-title': '公司命名',
+                'service2-description': '根据行业特点和发展愿景，打造独特易记、富有文化底蕴的企业名称。',
+                'service3-title': '成人改名',
+                'service3-description': '针对个人发展需求，结合命理分析，提供更适合的名字选择。',
+                
+                // 流程
+                'process-title': '命名流程',
+                'step1-title': '需求沟通',
+                'step1-description': '了解客户需求和期望',
+                'step2-title': '命理分析',
+                'step2-description': '结合生辰八字进行分析',
+                'step3-title': '创意构思',
+                'step3-description': '精心构思多个备选方案',
+                'step4-title': '最终确定',
+                'step4-description': '与客户沟通确定最终方案',
+                
+                // IP形象内容
+                'ip-title': 'IP形象',
+                'ip-subtitle': '凡石先生 - 传统文化的传承者与传播者',
+                'ip-name': '凡石先生',
+                'ip-description1': '凡石先生是我们精心打造的文化IP形象，身着传统汉服，头戴儒巾，手持毛笔和书卷，体现了中国传统文化学者的儒雅风范。他不仅是知识的传播者，更是文化的传承者。',
+                'ip-description2': '凡石先生将陪伴大家走进传统文化的世界，感受千年智慧的魅力，让传统文化在现代生活中焕发新的生机与活力。',
+                
+                // 特色功能
+                'feature1-title': '文化传承',
+                'feature1-description': '传承中华优秀传统文化',
+                'feature2-title': '智慧传播',
+                'feature2-description': '传播经典文化智慧',
+                
+                // 应用场景
+                'application-title': '应用场景',
+                'scene1-title': '品牌标识',
+                'scene1-description': '作为公司品牌形象代表',
+                'scene2-title': '数字产品',
+                'scene2-description': '应用于APP、网站等数字平台',
+                'scene3-title': '教育场景',
+                'scene3-description': '文化教育和培训活动',
+                
+                // 故事内容
+                'story-title': '凡石先生的故事',
+                'story-paragraph1': '凡石先生自幼酷爱读书，对中华传统文化有着深厚的感情。他遍读四书五经，精研诗词歌赋，深悟其中的人生智慧和处世之道。',
+                'story-paragraph2': '成年后，凡石先生游历四方，寻访名师，切磋学问。他深感传统文化的博大精深，也意识到传承和弘扬传统文化的重要性。',
+                'story-paragraph3': '如今，凡石先生致力于传统文化的传播与教育，希望通过自己的努力，让更多的人了解和喜爱中华传统文化，让千年智慧在现代社会中绽放新的光彩。',
+                
+                // 案例展示
+                'cases-title': '案例展示',
+                'cases-subtitle': '精选我们的成功案例，见证文化传承的力量',
+                'activity-title': '文化活动策划',
+                'activity-name': '传统节日庆典',
+                'activity-description': '我们策划并执行了多场大型传统文化活动，包括春节庙会、端午龙舟赛、中秋赏月会等，让市民在参与中感受传统文化的魅力，增强文化认同感。',
+                'case1': '春节庙会 - 参与人数超过10万人次',
+                'case2': '端午文化节 - 弘扬龙舟精神',
+                'case3': '中秋诗会 - 传承诗词文化',
+                
+                // 客户反馈
+                'feedback-title': '客户反馈',
+                'client1-name': '张女士',
+                'client1-type': '宝宝起名客户',
+                'client1-feedback': '"为宝宝起的名字既有文化内涵，又符合命理，全家人都很满意。老师的专业水平很高，服务态度也很好。"',
+                'client2-name': '李总',
+                'client2-type': '企业命名客户',
+                'client2-feedback': '"公司名字起得很好，既体现了我们的行业特色，又有很好的寓意。现在客户都夸我们的名字有文化底蕴。"',
+                'client3-name': '王经理',
+                'client3-type': '活动策划客户',
+                'client3-feedback': '"凡石文化策划的文化活动非常成功，现场氛围很好，参与者反响热烈。专业的团队和贴心的服务让我们很放心。"',
+                
+                // 关于我们
+                'about-title': '关于我们',
+                'about-subtitle': '传承文化薪火，弘扬中华精神',
+                'company-title': '公司简介',
+                'company-description1': '凡石文化成立于2024年，是一家专注于传统文化传承与发展的综合性文化公司。我们致力于通过专业的命名服务、文化教育、活动策划和文创开发，让传统文化在现代社会中焕发新的生机。',
+                'company-description2': '虽然成立时间不长，但我们拥有专业的团队和丰富的经验，在业内树立了良好的口碑，成为传统文化传承与发展的重要力量。',
+                
+                // 统计数据
+                'stat1': '1000+',
+                'stat1-label': '服务客户',
+                'stat2': '50+',
+                'stat2-label': '文化活动',
+                'stat3': '1+',
+                'stat3-label': '服务年限',
+                
+                // 使命愿景
+                'mission-title': '我们的使命',
+                'mission-statement': '"传承中华优秀传统文化，弘扬民族精神，让经典智慧在现代生活中焕发新的光彩，为构建中华民族共有精神家园贡献力量。"',
+                'vision-title': '成为引领者',
+                'vision-description': '传统文化传承与发展的引领者',
+                'mission-title2': '传承弘扬',
+                'mission-description2': '传承文化薪火，弘扬中华精神',
+                'value-title': '专业诚信',
+                'value-description': '专业、诚信、创新、传承',
+                
+                // 联系我们
+                'contact-title': '联系我们',
+                'contact-subtitle': '期待与您携手传承传统文化，共创美好未来',
+                'contact-info-title': '联系方式',
+                'address-title': '公司地址',
+                'address': '北京市通州区北苑155号417',
+                'phone-title': '联系电话',
+                'phone': '16754983474',
+                'email-title': '邮箱地址',
+                'email': 'qiulibinxm@163.com',
+                'hours-title': '服务时间',
+                'hours': '周一至周日 9:00-18:00',
+                'form-title': '在线咨询',
+                'name-label': '姓名',
+                'phone-label': '电话',
+                'service-label': '服务类型',
+                'requirement-label': '详细需求',
+                'submit-btn': '提交咨询',
+                
+                // 页脚
+                'footer-title': '凡石文化',
+                'footer-description': '传承经典文化，弘扬中华精神，让千年文化在现代生活中焕发新的光彩。',
+                'footer-services': '服务项目',
+                'footer-service1': '命名服务',
+                'footer-service2': 'IP形象',
+                'footer-service3': '活动策划',
+                'footer-service4': '文创开发',
+                'footer-links': '快速链接',
+                'footer-link1': '首页',
+                'footer-link2': '关于我们',
+                'footer-link3': '联系我们',
+                'footer-contact': '联系信息',
+                'footer-address': '北京市通州区北苑155号417',
+                'footer-phone': '16754983474',
+                'footer-email': 'qiulibinxm@163.com',
+                'copyright': '&copy; 2024 凡石文化. 保留所有权利. | 京ICP备xxxxxxxx号'
+            },
+            
+            images: {
+                'home-image': 'https://doc.doubao.com/s/aZJPl4JlQTY/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%281%29+%E6%8B%B7%E8%B4%9D.jpg',
+                'naming-image': 'https://doc.doubao.com/s/dNaWpTIlmUU/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%288%29.png',
+                'ip-main-image': 'https://doc.doubao.com/s/aZJPl4JlQTY/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%281%29+%E6%8B%B7%E8%B4%9D.jpg',
+                'scene1-image': 'https://doc.doubao.com/s/vhYAp_WTs7c/?alice_filename=12121.png',
+                'scene2-image': 'https://doc.doubao.com/s/CJdshVfEKck/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%289%29.png',
+                'scene3-image': 'https://doc.doubao.com/s/dNaWpTIlmUU/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%288%29.png',
+                'activity-image': 'https://doc.doubao.com/s/vccBaIXHC60/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%287%29.png',
+                'about-image': 'https://doc.doubao.com/s/vccBaIXHC60/?alice_filename=%E5%AE%8C%E5%96%84+IP+%E5%BD%A2%E8%B1%A1+%287%29.png'
+            },
+            
+            seo: {
+                title: '凡石文化 - 传承经典 文化育人',
+                description: '凡石文化专注于传统文化传承与发展，提供专业的命名服务、文化教育、活动策划、文创开发等全方位传统文化服务。',
+                keywords: '传统文化,命名服务,宝宝起名,公司命名,文化传承,凡石文化',
+                pageTitleFormat: '%page% - 凡石文化',
+                favicon: ''
+            }
+        };
+        
+        // 客户留言数据
+        let customerMessages = JSON.parse(localStorage.getItem('customerMessages') || '[]');
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查管理员登录状态
+            checkAdminLoginStatus();
+            
+            // 加载保存的数据
+            loadSavedData();
+            
+            // 初始化导航和表单
+            initNavigation();
+            initContactForm();
+            
+            // 初始化滚动动画
+            initScrollAnimations();
+        });
+        
+        // 检查管理员登录状态
+        function checkAdminLoginStatus() {
+            const adminLoggedIn = localStorage.getItem('adminLoggedIn');
+            if (adminLoggedIn === 'true') {
+                isAdminLoggedIn = true;
+                showAdminPanel();
+            }
+        }
+        
+        // 加载保存的数据
+        function loadSavedData() {
+            // 加载网站数据
+            const savedData = localStorage.getItem('websiteData');
+            if (savedData) {
+                Object.assign(websiteData, JSON.parse(savedData));
+            }
+            
+            // 加载客户留言
+            const savedMessages = localStorage.getItem('customerMessages');
+            if (savedMessages) {
+                customerMessages = JSON.parse(savedMessages);
+            }
+            
+            // 更新页面内容
+            updatePageContent();
+        }
+        
+        // 更新页面内容
+        function updatePageContent() {
+            // 更新文字内容
+            Object.keys(websiteData.content).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.innerHTML = websiteData.content[key];
+                }
+            });
+            
+            // 更新图片内容
+            Object.keys(websiteData.images).forEach(key => {
+                const element = document.getElementById(key);
+                if (element && element.tagName === 'IMG') {
+                    element.src = websiteData.images[key];
+                }
+            });
+            
+            // 更新SEO设置
+            updateSEO();
+        }
+        
+        // 更新SEO设置
+        function updateSEO() {
+            document.title = websiteData.seo.title;
+            
+            // 添加或更新meta标签
+            let metaDescription = document.querySelector('meta[name="description"]');
+            let metaKeywords = document.querySelector('meta[name="keywords"]');
+            
+            if (!metaDescription) {
+                metaDescription = document.createElement('meta');
+                metaDescription.name = 'description';
+                document.head.appendChild(metaDescription);
+            }
+            
+            if (!metaKeywords) {
+                metaKeywords = document.createElement('meta');
+                metaKeywords.name = 'keywords';
+                document.head.appendChild(metaKeywords);
+            }
+            
+            metaDescription.content = websiteData.seo.description;
+            metaKeywords.content = websiteData.seo.keywords;
+            
+            // 更新favicon
+            if (websiteData.seo.favicon) {
+                let favicon = document.querySelector('link[rel="icon"]');
+                if (!favicon) {
+                    favicon = document.createElement('link');
+                    favicon.rel = 'icon';
+                    document.head.appendChild(favicon);
+                }
+                favicon.href = websiteData.seo.favicon;
+            }
+        }
+        
+        // 初始化导航
+        function initNavigation() {
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                const backToTop = document.getElementById('back-to-top');
+                
+                if (window.scrollY > 100) {
+                    navbar.classList.add('bg-white/98');
+                    navbar.classList.remove('bg-white/95');
+                    
+                    // 显示返回顶部按钮
+                    backToTop.classList.remove('opacity-0', 'invisible');
+                    backToTop.classList.add('opacity-100', 'visible');
+                } else {
+                    navbar.classList.add('bg-white/95');
+                    navbar.classList.remove('bg-white/98');
+                    
+                    // 隐藏返回顶部按钮
+                    backToTop.classList.add('opacity-0', 'invisible');
+                    backToTop.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            // 移动端菜单
+            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 导航链接点击事件
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    scrollToSection(targetId);
+                    
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+            
+            // 返回顶部按钮
+            document.getElementById('back-to-top').addEventListener('click', function() {
+                // 添加点击动画
+                const arrow = this.querySelector('span');
+                arrow.classList.add('rotate-180');
+                
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                
+                // 恢复箭头方向
+                setTimeout(() => {
+                    arrow.classList.remove('rotate-180');
+                }, 300);
+            });
+        }
+        
+        // 平滑滚动
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            const navHeight = 80;
+            const elementPosition = element.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 初始化联系表单
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 获取表单数据
+                const formData = {
+                    name: document.getElementById('customer-name').value.trim(),
+                    phone: document.getElementById('customer-phone').value.trim(),
+                    service: document.getElementById('service-type').value,
+                    requirement: document.getElementById('customer-requirement').value.trim(),
+                    timestamp: new Date().toISOString(),
+                    id: Date.now()
+                };
+                
+                // 表单验证
+                if (!formData.name || !formData.phone || !formData.service || !formData.requirement) {
+                    alert('请填写完整的咨询信息！');
+                    return;
+                }
+                
+                // 防重复提交检查
+                if (isDuplicateMessage(formData)) {
+                    alert('您已经提交过类似的咨询，请不要重复提交！');
+                    return;
+                }
+                
+                // 防XSS攻击
+                sanitizeFormData(formData);
+                
+                // 保存留言
+                saveCustomerMessage(formData);
+                
+                // 显示成功消息
+                const submitBtn = document.getElementById('submit-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '提交成功！';
+                submitBtn.disabled = true;
+                
+                // 重置表单
+                form.reset();
+                
+                // 恢复按钮状态
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+        }
+        
+        // 检查重复留言
+        function isDuplicateMessage(newMessage) {
+            const recentMessages = customerMessages.filter(msg => {
+                const msgTime = new Date(msg.timestamp);
+                const currentTime = new Date();
+                const timeDiff = (currentTime - msgTime) / (1000 * 60 * 60 * 24); // 24小时内
+                
+                return timeDiff < 1 && 
+                       msg.phone === newMessage.phone && 
+                       msg.requirement === newMessage.requirement;
+            });
+            
+            return recentMessages.length > 0;
+        }
+        
+        // 防XSS攻击 - 数据净化
+        function sanitizeFormData(data) {
+            const sanitize = (text) => {
+                return text.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            };
+            
+            data.name = sanitize(data.name);
+            data.phone = sanitize(data.phone);
+            data.requirement = sanitize(data.requirement);
+        }
+        
+        // 保存客户留言
+        function saveCustomerMessage(message) {
+            customerMessages.unshift(message);
+            localStorage.setItem('customerMessages', JSON.stringify(customerMessages));
+        }
+        
+        // 初始化滚动动画
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // 观察所有需要动画的元素
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
+        
+        // 管理员功能
+        function showAdminPanel() {
+            if (!isAdminLoggedIn) return;
+            
+            document.getElementById('admin-panel').classList.remove('hidden');
+            switchAdminTab('content');
+        }
+        
+        // 切换管理员标签页
+        function switchAdminTab(tabName) {
+            // 更新标签页状态
+            currentAdminTab = tabName;
+            
+            // 隐藏所有标签页内容
+            document.querySelectorAll('.admin-tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // 重置所有标签按钮样式
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-scholar-accent');
+                btn.classList.add('hover:bg-scholar-dark/80');
+            });
+            
+            // 显示选中的标签页
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            
+            // 高亮选中的标签按钮
+            event.target.classList.add('bg-scholar-accent');
+            event.target.classList.remove('hover:bg-scholar-dark/80');
+            
+            // 初始化标签页内容
+            if (tabName === 'content') {
+                initContentManagement();
+            } else if (tabName === 'messages') {
+                initMessageManagement();
+            } else if (tabName === 'seo') {
+                initSEOSettings();
+            }
+        }
+        
+        // 初始化内容管理
+        function initContentManagement() {
+            const contentSelector = document.getElementById('content-selector');
+            const imageSelector = document.getElementById('image-selector');
+            
+            // 清空选择器
+            contentSelector.innerHTML = '<option value="">请选择...</option>';
+            imageSelector.innerHTML = '<option value="">请选择...</option>';
+            
+            // 生成内容选择器选项
+            Object.keys(websiteData.content).forEach(key => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = getContentDisplayName(key);
+                contentSelector.appendChild(option);
+            });
+            
+            // 生成图片选择器选项
+            Object.keys(websiteData.images).forEach(key => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = getImageDisplayName(key);
+                imageSelector.appendChild(option);
+            });
+        }
+        
+        // 获取内容显示名称
+        function getContentDisplayName(key) {
+            const displayNames = {
+                'home-title': '首页标题',
+                'home-slogan': '首页标语',
+                'home-description': '首页描述',
+                'naming-title': '命名服务标题',
+                'naming-subtitle': '命名服务副标题',
+                'naming-heading': '命名服务主标题',
+                'naming-description': '命名服务描述',
+                'service1-title': '宝宝起名标题',
+                'service1-description': '宝宝起名描述',
+                'service2-title': '公司命名标题',
+                'service2-description': '公司命名描述',
+                'service3-title': '成人改名标题',
+                'service3-description': '成人改名描述',
+                'process-title': '命名流程标题',
+                'step1-title': '步骤1标题',
+                'step1-description': '步骤1描述',
+                'step2-title': '步骤2标题',
+                'step2-description': '步骤2描述',
+                'step3-title': '步骤3标题',
+                'step3-description': '步骤3描述',
+                'step4-title': '步骤4标题',
+                'step4-description': '步骤4描述',
+                'ip-title': 'IP形象标题',
+                'ip-subtitle': 'IP形象副标题',
+                'ip-name': 'IP形象名称',
+                'ip-description1': 'IP形象描述1',
+                'ip-description2': 'IP形象描述2',
+                'feature1-title': '特色1标题',
+                'feature1-description': '特色1描述',
+                'feature2-title': '特色2标题',
+                'feature2-description': '特色2描述',
+                'application-title': '应用场景标题',
+                'scene1-title': '场景1标题',
+                'scene1-description': '场景1描述',
+                'scene2-title': '场景2标题',
+                'scene2-description': '场景2描述',
+                'scene3-title': '场景3标题',
+                'scene3-description': '场景3描述',
+                'story-title': '故事标题',
+                'story-paragraph1': '故事段落1',
+                'story-paragraph2': '故事段落2',
+                'story-paragraph3': '故事段落3',
+                'cases-title': '案例展示标题',
+                'cases-subtitle': '案例展示副标题',
+                'activity-title': '活动策划标题',
+                'activity-name': '活动名称',
+                'activity-description': '活动描述',
+                'case1': '案例1',
+                'case2': '案例2',
+                'case3': '案例3',
+                'feedback-title': '客户反馈标题',
+                'client1-name': '客户1姓名',
+                'client1-type': '客户1类型',
+                'client1-feedback': '客户1反馈',
+                'client2-name': '客户2姓名',
+                'client2-type': '客户2类型',
+                'client2-feedback': '客户2反馈',
+                'client3-name': '客户3姓名',
+                'client3-type': '客户3类型',
+                'client3-feedback': '客户3反馈',
+                'about-title': '关于我们标题',
+                'about-subtitle': '关于我们副标题',
+                'company-title': '公司简介标题',
+                'company-description1': '公司简介1',
+                'company-description2': '公司简介2',
+                'stat1': '统计数据1',
+                'stat1-label': '统计标签1',
+                'stat2': '统计数据2',
+                'stat2-label': '统计标签2',
+                'stat3': '统计数据3',
+                'stat3-label': '统计标签3',
+                'mission-title': '使命标题',
+                'mission-statement': '使命宣言',
+                'vision-title': '愿景标题',
+                'vision-description': '愿景描述',
+                'mission-title2': '使命标题2',
+                'mission-description2': '使命描述2',
+                'value-title': '价值观标题',
+                'value-description': '价值观描述',
+                'contact-title': '联系我们标题',
+                'contact-subtitle': '联系我们副标题',
+                'contact-info-title': '联系方式标题',
+                'address-title': '地址标题',
+                'address': '地址内容',
+                'phone-title': '电话标题',
+                'phone': '电话内容',
+                'email-title': '邮箱标题',
+                'email': '邮箱内容',
+                'hours-title': '服务时间标题',
+                'hours': '服务时间内容',
+                'form-title': '表单标题',
+                'name-label': '姓名标签',
+                'phone-label': '电话标签',
+                'service-label': '服务类型标签',
+                'requirement-label': '需求标签',
+                'submit-btn': '提交按钮文字',
+                'footer-title': '页脚标题',
+                'footer-description': '页脚描述',
+                'footer-services': '页脚服务标题',
+                'footer-service1': '页脚服务1',
+                'footer-service2': '页脚服务2',
+                'footer-service3': '页脚服务3',
+                'footer-service4': '页脚服务4',
+                'footer-links': '页脚链接标题',
+                'footer-link1': '页脚链接1',
+                'footer-link2': '页脚链接2',
+                'footer-link3': '页脚链接3',
+                'footer-contact': '页脚联系标题',
+                'footer-address': '页脚地址',
+                'footer-phone': '页脚电话',
+                'footer-email': '页脚邮箱',
+                'copyright': '版权信息'
+            };
+            
+            return displayNames[key] || key;
+        }
+        
+        // 获取图片显示名称
+        function getImageDisplayName(key) {
+            const displayNames = {
+                'home-image': '首页主图片',
+                'naming-image': '命名服务图片',
+                'ip-main-image': 'IP形象主图片',
+                'scene1-image': '场景1图片',
+                'scene2-image': '场景2图片',
+                'scene3-image': '场景3图片',
+                'activity-image': '活动策划图片',
+                'about-image': '关于我们图片'
+            };
+            
+            return displayNames[key] || key;
+        }
+        
+        // 加载内容进行编辑
+        function loadContentForEditing() {
+            const selector = document.getElementById('content-selector');
+            const currentContent = document.getElementById('current-content');
+            const newContent = document.getElementById('new-content');
+            
+            const selectedKey = selector.value;
+            if (selectedKey && websiteData.content[selectedKey]) {
+                currentContent.textContent = websiteData.content[selectedKey];
+                newContent.value = websiteData.content[selectedKey];
+            } else {
+                currentContent.textContent = '选择内容后显示...';
+                newContent.value = '';
+            }
+        }
+        
+        // 保存内容修改
+        function saveContent() {
+            const selector = document.getElementById('content-selector');
+            const newContent = document.getElementById('new-content').value.trim();
+            
+            const selectedKey = selector.value;
+            if (selectedKey && newContent) {
+                websiteData.content[selectedKey] = newContent;
+                saveWebsiteData();
+                updatePageContent();
+                
+                // 显示成功消息
+                alert('内容保存成功！');
+                loadContentForEditing(); // 刷新当前显示
+            } else {
+                alert('请选择要编辑的内容并输入新内容！');
+            }
+        }
+        
+        // 加载图片进行编辑
+        function loadImageForEditing() {
+            const selector = document.getElementById('image-selector');
+            const currentImage = document.getElementById('current-image');
+            
+            const selectedKey = selector.value;
+            if (selectedKey && websiteData.images[selectedKey]) {
+                currentImage.innerHTML = `<img src="${websiteData.images[selectedKey]}" alt="当前图片" class="max-h-24 rounded">`;
+            } else {
+                currentImage.innerHTML = '<span class="text-gray-500">选择图片后显示...</span>';
+            }
+        }
+        
+        // 保存图片修改
+        function saveImage() {
+            const selector = document.getElementById('image-selector');
+            const fileInput = document.getElementById('new-image');
+            
+            const selectedKey = selector.value;
+            const file = fileInput.files[0];
+            
+            if (selectedKey && file) {
+                // 验证文件类型
+                if (!file.type.startsWith('image/')) {
+                    alert('请上传图片文件！');
+                    return;
+                }
+                
+                // 验证文件大小
+                if (file.size > 2 * 1024 * 1024) { // 2MB
+                    alert('图片大小不能超过2MB！');
+                    return;
+                }
+                
+                // 读取图片文件
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    websiteData.images[selectedKey] = e.target.result;
+                    saveWebsiteData();
+                    updatePageContent();
+                    loadImageForEditing();
+                    
+                    // 清空文件输入
+                    fileInput.value = '';
+                    
+                    alert('图片上传成功！');
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('请选择要更换的图片并上传新图片！');
+            }
+        }
+        
+        // 初始化留言管理
+        function initMessageManagement() {
+            renderMessagesList();
+        }
+        
+        // 渲染留言列表
+        function renderMessagesList() {
+            const messagesList = document.getElementById('messages-list');
+            const noMessages = document.getElementById('no-messages');
+            
+            // 获取筛选条件
+            const serviceFilter = document.getElementById('service-filter').value;
+            const searchTerm = document.getElementById('message-search').value.toLowerCase();
+            
+            // 筛选留言
+            let filteredMessages = customerMessages;
+            
+            if (serviceFilter) {
+                filteredMessages = filteredMessages.filter(msg => msg.service === serviceFilter);
+            }
+            
+            if (searchTerm) {
+                filteredMessages = filteredMessages.filter(msg => 
+                    msg.name.toLowerCase().includes(searchTerm) ||
+                    msg.phone.includes(searchTerm) ||
+                    msg.requirement.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            if (filteredMessages.length === 0) {
+                messagesList.innerHTML = '';
+                noMessages.classList.remove('hidden');
+                return;
+            }
+            
+            noMessages.classList.add('hidden');
+            messagesList.innerHTML = '';
+            
+            filteredMessages.forEach(message => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-100 hover:bg-gray-50';
+                
+                const serviceNames = {
+                    'baby-name': '宝宝起名',
+                    'company-name': '公司命名',
+                    'adult-name': '成人改名',
+                    'event-planning': '活动策划',
+                    'cultural-products': '文创开发',
+                    'other': '其他咨询'
+                };
+                
+                const date = new Date(message.timestamp);
+                const formattedDate = date.toLocaleString('zh-CN');
+                
+                tr.innerHTML = `
+                    <td class="py-3 px-4">${message.name}</td>
+                    <td class="py-3 px-4">${message.phone}</td>
+                    <td class="py-3 px-4">${serviceNames[message.service] || message.service}</td>
+                    <td class="py-3 px-4">${formattedDate}</td>
+                    <td class="py-3 px-4">
+                        <button onclick="viewMessageDetail(${message.id})" class="text-blue-600 hover:text-blue-800 mr-3">查看</button>
+                        <button onclick="deleteMessage(${message.id})" class="text-red-600 hover:text-red-800">删除</button>
+                    </td>
+                `;
+                
+                messagesList.appendChild(tr);
+            });
+        }
+        
+        // 筛选留言
+        function filterMessages() {
+            renderMessagesList();
+        }
+        
+        // 查看留言详情
+        function viewMessageDetail(messageId) {
+            const message = customerMessages.find(msg => msg.id === messageId);
+            if (message) {
+                const serviceNames = {
+                    'baby-name': '宝宝起名',
+                    'company-name': '公司命名',
+                    'adult-name': '成人改名',
+                    'event-planning': '活动策划',
+                    'cultural-products': '文创开发',
+                    'other': '其他咨询'
+                };
+                
+                const date = new Date(message.timestamp);
+                const formattedDate = date.toLocaleString('zh-CN');
+                
+                alert(`
+                    客户留言详情：
+                    姓名：${message.name}
+                    电话：${message.phone}
+                    服务类型：${serviceNames[message.service] || message.service}
+                    提交时间：${formattedDate}
+                    详细需求：${message.requirement}
+                `);
+            }
+        }
+        
+        // 删除留言
+        function deleteMessage(messageId) {
+            if (confirm('确定要删除这条留言吗？')) {
+                customerMessages = customerMessages.filter(msg => msg.id !== messageId);
+                localStorage.setItem('customerMessages', JSON.stringify(customerMessages));
+                renderMessagesList();
+            }
+        }
+        
+        // 删除所有留言
+        function deleteAllMessages() {
+            if (confirm('确定要删除所有客户留言吗？此操作不可恢复！')) {
+                customerMessages = [];
+                localStorage.setItem('customerMessages', JSON.stringify(customerMessages));
+                renderMessagesList();
+            }
+        }
+        
+        // 初始化SEO设置
+        function initSEOSettings() {
+            document.getElementById('seo-title').value = websiteData.seo.title;
+            document.getElementById('seo-description').value = websiteData.seo.description;
+            document.getElementById('seo-keywords').value = websiteData.seo.keywords;
+            document.getElementById('page-title-format').value = websiteData.seo.pageTitleFormat;
+        }
+        
+        // 保存SEO设置
+        function saveSEOsettings() {
+            const seoData = {
+                title: document.getElementById('seo-title').value.trim(),
+                description: document.getElementById('seo-description').value.trim(),
+                keywords: document.getElementById('seo-keywords').value.trim(),
+                pageTitleFormat: document.getElementById('page-title-format').value.trim(),
+                favicon: websiteData.seo.favicon
+            };
+            
+            // 验证SEO数据
+            if (!seoData.title) {
+                alert('请填写网站标题！');
+                return;
+            }
+            
+            if (!seoData.description) {
+                alert('请填写网站描述！');
+                return;
+            }
+            
+            // 处理favicon上传
+            const faviconInput = document.getElementById('seo-favicon');
+            const faviconFile = faviconInput.files[0];
+            
+            if (faviconFile) {
+                if (!faviconFile.type.startsWith('image/')) {
+                    alert('请上传图片文件作为favicon！');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    seoData.favicon = e.target.result;
+                    completeSaveSEO(seoData);
+                };
+                reader.readAsDataURL(faviconFile);
+            } else {
+                completeSaveSEO(seoData);
+            }
+        }
+        
+        // 完成SEO保存
+        function completeSaveSEO(seoData) {
+            websiteData.seo = seoData;
+            saveWebsiteData();
+            updateSEO();
+            
+            // 清空favicon输入
+            document.getElementById('seo-favicon').value = '';
+            
+            alert('SEO设置保存成功！');
+        }
+        
+        // 保存网站数据
+        function saveWebsiteData() {
+            localStorage.setItem('websiteData', JSON.stringify(websiteData));
+        }
+        
+        // 管理员退出登录
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            localStorage.removeItem('adminLoggedIn');
+            document.getElementById('admin-panel').classList.add('hidden');
+            
+            // 跳转到管理登录页面
+            window.location.href = 'admin.html';
+        }
+        
+        // 键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            // ESC键关闭模态框或面板
+            if (e.key === 'Escape') {
+                if (isAdminLoggedIn) {
+                    // 可以在这里添加关闭面板的逻辑
+                }
+            }
+        });
+    </script>
+</body>
+</html>
